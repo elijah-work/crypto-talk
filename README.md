@@ -2,7 +2,7 @@
 
 從貨幣歷史，了解比特幣，看穿騙局 · 2026.10.23 分享會簡報
 
-線上版：https://elijah-work.github.io/crypto-talk/
+線上版：https://elijah-work.github.io/crypto-talk/ （推送到 `main` 後約 1 分鐘自動更新）
 
 ## 操作
 
