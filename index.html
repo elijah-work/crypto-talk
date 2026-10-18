@@ -1501,6 +1501,11 @@ table.cmp.center td:first-child { color: var(--btc); }
 .vs-art2 .sl { fill: #0d0a07; stroke: var(--safe); stroke-width: 3; }
 .vs-art2 .ck { fill: none; stroke: var(--safe); stroke-width: 5; stroke-linecap: round; stroke-linejoin: round; }
 
+
+/* ================= v13: no on-screen control bar (keys: ← → N F; phones: tap sides, long-press for notes) ================= */
+#controls { display: none !important; }
+#viewport { -webkit-user-select: none; user-select: none; -webkit-touch-callout: none; }
+#notes-panel { padding-bottom: calc(18px + env(safe-area-inset-bottom, 0px)); }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation-duration: .01ms !important; animation-delay: 0s !important; transition-duration: .01ms !important; transition-delay: 0s !important; }
   canvas.guilloche { animation: none; }
@@ -1520,7 +1525,7 @@ table.cmp.center td:first-child { color: var(--btc); }
   <p class="sub2">從貨幣歷史，了解比特幣，看穿騙局</p>
   <p class="dt">2026 · 10 · 23</p>
   <aside class="notes" data-time="0:30">
-    <p>主持人介紹完後上台，先停在這頁。燈光會先亮起，再浮出標題。操作：← → 下一步、N 講稿、F 全螢幕；手機點畫面左側上一頁、右側下一頁。</p>
+    <p>主持人介紹完後上台，先停在這頁。燈光會先亮起，再浮出標題。操作：← → 換頁、N 講稿、F 全螢幕；手機點畫面左側上一頁、右側下一頁，長按畫面打開講稿。</p>
     <ul><li>「今天的題目是一個問句。最後，我會請大家自己回答它。」</li></ul>
   </aside>
 </section>
@@ -2906,7 +2911,16 @@ var BTC = {"wk":[["2021-10-25",63032,63032,58563,61433],["2021-11-01",61092,6304
   document.getElementById('btn-next').addEventListener('click', next);
   document.getElementById('btn-notes').addEventListener('click', toggleNotes);
   document.getElementById('btn-full').addEventListener('click', toggleFull);
+  var pressed = false, pressTimer = null;
+  document.getElementById('viewport').addEventListener('touchstart', function () {
+    pressed = false; clearTimeout(pressTimer);
+    pressTimer = setTimeout(function () { pressed = true; toggleNotes(); }, 600);
+  }, { passive: true });
+  ['touchend', 'touchmove', 'touchcancel'].forEach(function (ev) {
+    document.getElementById('viewport').addEventListener(ev, function () { clearTimeout(pressTimer); }, { passive: true });
+  });
   document.getElementById('viewport').addEventListener('click', function (e) {
+    if (pressed) { pressed = false; return; }
     if (e.clientX < window.innerWidth * .4) prev(); else next();
   });
 
