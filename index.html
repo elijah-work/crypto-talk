@@ -1557,6 +1557,31 @@ table.cmp.center td:first-child { color: var(--btc); }
 .s-recap.st-6 .rc.r8 { border-color: var(--btc); background: rgba(226,166,84,.12); box-shadow: 0 0 28px rgba(226,166,84,.25); }
 
 .rquiz .rhint { margin-top: 70px; text-align: center; font: 500 30px/1.6 var(--serif); color: var(--muted); }
+
+/* ================= v16: half-time recap ================= */
+.s-recap2 { align-items: center; text-align: center; gap: 38px; }
+.rh2 { display: flex; flex-direction: column; align-items: center; gap: 14px; }
+.rh2 .h2 { font-size: 66px; }
+.rrow { display: flex; flex-direction: column; align-items: center; gap: 14px; }
+.rl2 { font: 600 18px/1 var(--mono); letter-spacing: .4em; color: var(--btc); }
+.rrow.neg .rl2 { color: var(--alert); }
+.rcards { display: grid; gap: 18px; }
+.rcards.pros { grid-template-columns: repeat(5, 252px); }
+.rcards.cons { grid-template-columns: repeat(3, 252px); }
+.rc2 { display: flex; flex-direction: column; align-items: center; gap: 12px; padding: 24px 16px 22px; border-radius: 16px;
+  background: radial-gradient(120% 90% at 50% 0%, #1a130a, #0a0806 72%); border: 1px solid rgba(226,166,84,.4); }
+.rc2 svg { width: 46px; height: 46px; fill: none; stroke: var(--btc); stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; filter: drop-shadow(0 0 10px rgba(226,166,84,.3)); }
+.rc2 b { font: 700 28px/1.2 var(--serif); color: var(--btc); white-space: nowrap; }
+.rc2 span { font: 400 19px/1.5 var(--body); color: var(--muted); }
+.cons .rc2 { border-color: rgba(207,122,54,.45); background: radial-gradient(120% 90% at 50% 0%, #1b0f08, #0a0806 72%); }
+.cons .rc2 svg { stroke: var(--alert); filter: drop-shadow(0 0 10px rgba(207,122,54,.35)); }
+.cons .rc2 b { color: var(--alert); }
+.rc2 svg .x { stroke: var(--alert); }
+.slide.active .rc2.on { animation: pop .5s cubic-bezier(.2,.8,.2,1) both; }
+.pros .rc2:nth-child(2) { animation-delay: .06s !important; } .pros .rc2:nth-child(3) { animation-delay: .12s !important; }
+.pros .rc2:nth-child(4) { animation-delay: .18s !important; } .pros .rc2:nth-child(5) { animation-delay: .24s !important; }
+.cons .rc2:nth-child(2) { animation-delay: .08s !important; } .cons .rc2:nth-child(3) { animation-delay: .16s !important; }
+
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation-duration: .01ms !important; animation-delay: 0s !important; transition-duration: .01ms !important; transition-delay: 0s !important; }
   canvas.guilloche { animation: none; }
@@ -2093,21 +2118,16 @@ table.cmp.center td:first-child { color: var(--btc); }
   <aside class="notes" data-time="1:00"><ul><li>交易一旦被確認，就寫進全世界的帳本，沒有人能幫你按「取消」。</li><li>第 1 下：蓋上「無法撤回」。再按一下出現最後一句：跨境、快速、不可撤回，正是詐騙集團愛用它的原因。</li><li>轉場：「所以，新聞說加密貨幣是詐騙，到底對不對？」</li></ul></aside>
 </section>
 
-<section class="slide s-recap" data-sec="02 比特幣與區塊鏈" data-steps="6">
-  <div class="rh"><div class="kicker">中場回顧</div><h2 class="h2">休息一下，回顧一下</h2></div>
-  <div class="rbody">
-    <div class="rgrid">
-      <div class="rcol"><p class="rl">優點</p><div class="rc r1"><b>抗通膨</b><span>總量固定 2,100 萬枚，誰都不能多印</span></div><div class="rc r2"><b>全天候・無國界</b><span>24 小時、跨國都能直接轉</span></div><div class="rc r3"><b>手續費低</b><span>轉多少都差不多，約 1 美元</span></div><div class="rc r4"><b>去中心化</b><span>沒有老闆，上萬台電腦一起記帳</span></div><div class="rc r5"><b>交易無法竄改</b><span>改一筆，全世界都知道</span></div></div>
-      <div class="rcol neg"><p class="rl">代價</p><div class="rc r6"><b>弄丟，就沒了</b><span>助記詞弄丟，錢永遠拿不回來</span></div><div class="rc r7"><b>漲跌幅大</b><span>一年 −77%，十年 187 倍</span></div><div class="rc r8"><b>轉出去，就回不來</b><span>沒有取消鍵，也沒有客服</span></div></div>
-    </div>
-    <div class="rquiz"><p class="rl">快問快答</p><p class="rhint" data-only="0">看完這張表，<br>等一下考考你 ↓</p><div class="qa f" data-step="1"><p class="q"><i>Q1</i>比特幣最多會有幾枚？</p><p class="a f" data-step="2">2,100 萬枚</p></div><div class="qa f" data-step="3"><p class="q"><i>Q2</i>忘記助記詞，客服能幫你找回來嗎？</p><p class="a f" data-step="4">不能，弄丟就沒了</p></div><div class="qa f" data-step="5"><p class="q"><i>Q3</i>轉錯地址，可以按取消嗎？</p><p class="a f" data-step="6">不行，轉出去就回不來</p></div></div>
-  </div>
-  <aside class="notes" data-time="2:00">
-    <p>中場休息一下。先讓大家看完整張表（約 20 秒），再進快問快答：每按一下出現一題，先請台下喊答案，再按一下揭曉，左邊對應的那一格會亮起來。</p>
+<section data-key="k053" class="slide s-recap2" data-sec="02 比特幣與區塊鏈" data-steps="2">
+  <div class="rh2"><div class="kicker">中場回顧</div><h2 class="h2">休息一下，回顧一下</h2></div>
+  <div class="rrow"><p class="rl2">優點</p><div class="rcards pros"><div class="rc2 f" data-step="1"><svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="17"/><path d="M24 13v22M19 17h7a4 4 0 0 1 0 8h-6 7a4 4 0 0 1 0 8h-8"/></svg><b>抗通膨</b><span>總量固定 2,100 萬枚<br>誰都不能多印</span></div><div class="rc2 f" data-step="1"><svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="17"/><path d="M7 24h34M24 7c6 5 6 29 0 34M24 7c-6 5-6 29 0 34"/></svg><b>全天候・無國界</b><span>24 小時、跨國直接轉<br>不用等銀行營業</span></div><div class="rc2 f" data-step="1"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M8 17h28l-6-6M40 31H12l6 6"/></svg><b>手續費低</b><span>轉多少都差不多<br>約 1 美元</span></div><div class="rc2 f" data-step="1"><svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="10" r="4"/><circle cx="9" cy="34" r="4"/><circle cx="39" cy="34" r="4"/><circle cx="24" cy="26" r="4"/><path d="M24 14v8M12 32l9-4M36 32l-9-4M11 30l10-17M37 30L27 13M13 34h22"/></svg><b>去中心化</b><span>沒有老闆<br>上萬台電腦一起記帳</span></div><div class="rc2 f" data-step="1"><svg viewBox="0 0 48 48" aria-hidden="true"><rect x="11" y="21" width="26" height="20" rx="4"/><path d="M16 21v-6a8 8 0 0 1 16 0v6M24 29v5"/></svg><b>交易無法竄改</b><span>改一筆<br>全世界都知道</span></div></div></div>
+  <div class="rrow neg"><p class="rl2">代價</p><div class="rcards cons"><div class="rc2 f" data-step="2"><svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="15" cy="24" r="8"/><path d="M23 24h18M35 24v6M41 24v5"/><path d="M30 8l10 10M40 8L30 18" class="x"/></svg><b>弄丟，就沒了</b><span>助記詞弄丟<br>錢永遠拿不回來</span></div><div class="rc2 f" data-step="2"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M5 34l8-14 7 8 9-18 7 14 7-6"/><path d="M5 41h38" opacity=".5"/></svg><b>漲跌幅大</b><span>一年 −77%<br>十年 187 倍</span></div><div class="rc2 f" data-step="2"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M20 10H10v28h10"/><path d="M18 24h24M34 16l8 8-8 8"/></svg><b>轉出去，就回不來</b><span>沒有取消鍵<br>也沒有客服</span></div></div></div>
+  <aside class="notes" data-time="1:30">
+    <p>中場休息一下。按一下出現五個優點，再按一下出現三個代價。可以停 20 秒讓大家拍照、喝口水。</p>
     <ul>
-      <li>Q1：比特幣最多會有幾枚？→ 2,100 萬枚（抗通膨）。</li>
-      <li>Q2：忘記助記詞，客服能幫你找回來嗎？→ 不能，弄丟就沒了。</li>
-      <li>Q3：轉錯地址，可以按取消嗎？→ 不行，轉出去就回不來。</li>
+      <li>優點：抗通膨（總量固定）、全天候無國界、手續費低、去中心化、交易無法竄改。</li>
+      <li>代價：弄丟就沒了、漲跌幅大、轉出去就回不來。</li>
+      <li>可以隨口問台下一兩題，例如「比特幣最多幾枚？」「轉錯可以取消嗎？」</li>
       <li>收尾：「優點和代價都知道了。接下來我們來看，為什麼新聞總說它是詐騙。」</li>
     </ul>
   </aside>
@@ -2212,11 +2232,14 @@ table.cmp.center td:first-child { color: var(--btc); }
     </div><div class="vtool"><i></i><i></i><i></i><i class="end"></i></div></div>
   </div>
   <div class="lesson f"><div class="seal green">守則</div><p class="big">付款前，用你原本就有的電話回撥確認</p></div>
-  <aside class="notes" data-time="1:30">
+  <aside class="notes" data-time="2:00">
+    <p>先停在這頁問：「如果老闆和同事在視訊會議裡叫你匯款，你會照做嗎？」再按下一步揭曉。</p>
     <ul>
-      <li>先停在這頁問：「如果老闆和同事在視訊會議裡叫你匯款，你會照做嗎？」</li>
-      <li>按下一步揭曉：英商 Arup 香港分公司的財務專員，被拉進一場視訊會議，畫面裡的財務長和同事全部是 AI 深偽（用 YouTube 上公開的影音做的）。他照指示分 15 次匯出港幣 2 億元（約 2,500 萬美元）。</li>
-      <li>對採購、外包管理的聽眾：「如果供應商突然通知你換匯款帳戶，你會怎麼確認？」看到老闆的臉、聽到老闆的聲音，都不再是證據。</li>
+      <li>2024 年 1 月，英國工程顧問公司 Arup（雪梨歌劇院、北京鳥巢的結構設計公司）香港分公司一位財務人員，收到一則看似英國總部財務長（CFO）傳來的訊息，說要做一筆「機密交易」。</li>
+      <li>他一開始懷疑是釣魚詐騙。對方於是拉他進一場多人視訊會議：畫面裡有財務長、還有幾位他認識的同事，長相、聲音都對，他就放下戒心。</li>
+      <li>他照指示分 15 次，把共 2 億港幣（約 2,500 萬美元）匯到 5 個香港銀行帳戶。之後他向總部確認，才發現被騙。</li>
+      <li>香港警方說：會議裡除了他，其他人全是假的，是詐騙集團用網路上公開的影片和聲音，以 AI 深偽（deepfake）做出來的。2024 年 2 月警方公開案件，同年 5 月 Arup 證實自己是受害公司，表示公司財務與內部系統沒有受影響。</li>
+      <li>守則：付款前，用你原本就有的電話號碼回撥確認，不要用對方給的聯絡方式。看到老闆的臉、聽到老闆的聲音，都不再是證據。</li>
     </ul>
   </aside>
 </section>
