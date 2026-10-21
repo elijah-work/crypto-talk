@@ -1525,6 +1525,38 @@ table.cmp.center td:first-child { color: var(--btc); }
 .lw-eq { font: 700 46px/1 var(--serif); color: var(--ink); letter-spacing: .06em; }
 .lw-eq b { color: var(--btc); text-shadow: 0 0 22px rgba(226,166,84,.35); }
 
+
+/* ================= v15 ================= */
+
+.s-me2.st-1 .tl-prog { width: 180px; } .s-me2.st-2 .tl-prog { width: 470px; } .s-me2.st-3 .tl-prog { width: 760px; }
+.s-me2.st-4 .tl-prog { width: 1030px; } .s-me2.st-5 .tl-prog { width: 1290px; } .s-me2.st-6 .tl-prog { width: 1250px; }
+.s-me2.st-6 .ms { left: var(--xz); }
+.s-me2.st-6 .ms.early { opacity: 0; }
+
+.s-recap { gap: 34px; }
+.rh { display: flex; flex-direction: column; gap: 12px; }
+.rh .h2 { font-size: 64px; }
+.rbody { display: grid; grid-template-columns: 1fr 440px; gap: 40px; align-items: start; }
+.rgrid { display: grid; grid-template-columns: 1fr 1fr; gap: 26px; }
+.rcol { display: flex; flex-direction: column; gap: 12px; }
+.rl { font: 600 18px/1 var(--mono); letter-spacing: .24em; color: var(--btc); margin-bottom: 4px; }
+.rcol.neg .rl { color: var(--alert); }
+.rc { display: flex; flex-direction: column; gap: 6px; padding: 16px 20px; border-radius: 12px; background: #0d0a07; border: 1px solid rgba(226,166,84,.3); transition: border-color .4s ease, background .4s ease, box-shadow .4s ease; }
+.rc b { font: 700 28px/1.2 var(--serif); color: var(--btc); }
+.rc span { font: 400 19px/1.4 var(--body); color: var(--muted); }
+.rcol.neg .rc { border-color: rgba(207,122,54,.35); }
+.rcol.neg .rc b { color: var(--alert); }
+.rquiz { display: flex; flex-direction: column; gap: 16px; padding: 26px 28px; border-radius: 18px; background: radial-gradient(120% 80% at 50% 0%, #17110a, #0a0806 70%); border: 1px solid rgba(226,166,84,.4); }
+.rquiz .qa { display: flex; flex-direction: column; gap: 8px; padding-bottom: 14px; border-bottom: 1px solid rgba(255,255,255,.06); }
+.rquiz .qa:last-child { border-bottom: 0; padding-bottom: 0; }
+.rquiz .q { font: 600 25px/1.4 var(--body); color: var(--ink); display: flex; gap: 12px; }
+.rquiz .q i { font: 600 18px/1.9 var(--mono); font-style: normal; color: var(--btc); flex: none; }
+.rquiz .a { font: 700 26px/1.3 var(--serif); color: var(--btc); padding-left: 38px; text-shadow: 0 0 18px rgba(226,166,84,.3); }
+.s-recap.st-2 .rc.r1 { border-color: var(--btc); background: rgba(226,166,84,.12); box-shadow: 0 0 28px rgba(226,166,84,.25); }
+.s-recap.st-4 .rc.r6 { border-color: var(--btc); background: rgba(226,166,84,.12); box-shadow: 0 0 28px rgba(226,166,84,.25); }
+.s-recap.st-6 .rc.r8 { border-color: var(--btc); background: rgba(226,166,84,.12); box-shadow: 0 0 28px rgba(226,166,84,.25); }
+
+.rquiz .rhint { margin-top: 70px; text-align: center; font: 500 30px/1.6 var(--serif); color: var(--muted); }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation-duration: .01ms !important; animation-delay: 0s !important; transition-duration: .01ms !important; transition-delay: 0s !important; }
   canvas.guilloche { animation: none; }
@@ -1592,25 +1624,24 @@ table.cmp.center td:first-child { color: var(--btc); }
 </section>
 
 <!-- ================= 自我介紹 ================= -->
-<section data-key="k004" class="slide s-me2" data-sec="自我介紹" data-steps="8" style="gap:34px">
+<section data-key="k004" class="slide s-me2" data-sec="自我介紹" data-steps="7" style="gap:34px">
   <h2 class="h2" style="font-size:80px">我是 Elijah</h2>
   <div class="tl">
     <div class="tl-base"></div><div class="tl-prog"></div>
-    <div class="ms f up early" data-step="1" style="--x:160px;--xz:-575px"><span class="dot"></span><div class="lbl2"><span class="y">2018</span><span class="t">進入外匯金融業</span><span class="s">大學畢業</span></div></div>
-    <div class="ms f dn early" data-step="2" style="--x:400px;--xz:-188px"><span class="dot"></span><div class="lbl2"><span class="y">2020</span><span class="t">室內建築設計行業</span></div></div>
-    <div class="ms f up " data-step="3" style="--x:640px;--xz:200px"><span class="dot"></span><div class="lbl2"><span class="y">2021</span><span class="t">進入區塊鏈行業</span><span class="s">玩家</span></div></div>
-    <div class="ms f dn " data-step="4" style="--x:870px;--xz:571px"><span class="dot"></span><div class="lbl2"><span class="y">2022</span><span class="t">兼職</span><span class="s">開始了解區塊鏈和比特幣</span></div></div>
-    <div class="ms f up " data-step="5" style="--x:1100px;--xz:943px"><span class="dot"></span><div class="lbl2"><span class="y">2024</span><span class="t">全職</span><span class="s">正式踏進產業</span></div></div>
-    <div class="ms f dn next" data-step="6" style="--x:1290px;--xz:1250px"><span class="dot"></span><div class="lbl2"><span class="y">2026</span><span class="t">踏入 AI 領域</span></div></div>
+    <div class="ms f up early" data-step="1" style="--x:180px;--xz:-520px"><span class="dot"></span><div class="lbl2"><span class="y">2018</span><span class="t">進入外匯金融業</span><span class="s">大學畢業</span></div></div>
+    <div class="ms f dn" data-step="2" style="--x:470px;--xz:200px"><span class="dot"></span><div class="lbl2"><span class="y">2021</span><span class="t">進入區塊鏈行業</span><span class="s">玩家</span></div></div>
+    <div class="ms f up" data-step="3" style="--x:760px;--xz:560px"><span class="dot"></span><div class="lbl2"><span class="y">2022</span><span class="t">兼職</span><span class="s">開始了解區塊鏈和比特幣</span></div></div>
+    <div class="ms f dn" data-step="4" style="--x:1030px;--xz:930px"><span class="dot"></span><div class="lbl2"><span class="y">2024</span><span class="t">全職</span><span class="s">正式踏進產業</span></div></div>
+    <div class="ms f up next" data-step="5" style="--x:1290px;--xz:1250px"><span class="dot"></span><div class="lbl2"><span class="y">2026</span><span class="t">踏入 AI 領域</span></div></div>
   </div>
-  <div class="tl-info f" data-step="8">
+  <div class="tl-info f" data-step="7">
     <p class="one"><span>5 年裡，經歷</span><span class="v">5</span><span>個項目的成功和失敗</span></p>
   </div>
   <aside class="notes" data-time="2:30">
-    <p>前 6 下：路線一站一站往前走。第 7 下：畫面放大到 2021–2026 這段。第 8 下：出現「5 年裡，經歷 5 個項目的成功和失敗」。</p>
+    <p>前 5 下：路線一站一站往前走。第 6 下：畫面放大到 2021–2026 這段。第 7 下：出現「5 年裡，經歷 5 個項目的成功和失敗」。</p>
     <ul>
       <li>2018：大學畢業，進入外匯金融業。「我的第一份工作就在跟『錢』打交道。」</li>
-      <li>2020：轉到室內建築設計行業。</li>
+      
       <li>2021：以玩家的身分進入區塊鏈，先自己玩、自己踩坑。</li>
       <li>2022：開始兼職，真正開始了解區塊鏈和比特幣。</li>
       <li>2024：全職，正式踏進這個產業。</li>
@@ -2060,6 +2091,26 @@ table.cmp.center td:first-child { color: var(--btc); }
   </div>
   <div class="ft-vis"><div class="rcpt2"><div class="ok"><svg viewBox="0 0 48 48"><circle class="ga" cx="24" cy="24" r="20"/><path class="ga" d="M14 25l7 7 13-15"/></svg><span>轉帳已送出</span></div><p class="amt">0.1 <small>BTC</small></p><div class="rr"><span>收款地址</span><b>bc1q9h7…x7ka</b></div><div class="rr"><span>狀態</span><b>已確認 · 6 個區塊</b></div><div class="rr"><span>時間</span><b>2026-10-23 19:42</b></div><div class="cancel"><span>取消交易</span></div><span class="seal f" data-step="1">無法撤回</span></div></div>
   <aside class="notes" data-time="1:00"><ul><li>交易一旦被確認，就寫進全世界的帳本，沒有人能幫你按「取消」。</li><li>第 1 下：蓋上「無法撤回」。再按一下出現最後一句：跨境、快速、不可撤回，正是詐騙集團愛用它的原因。</li><li>轉場：「所以，新聞說加密貨幣是詐騙，到底對不對？」</li></ul></aside>
+</section>
+
+<section class="slide s-recap" data-sec="02 比特幣與區塊鏈" data-steps="6">
+  <div class="rh"><div class="kicker">中場回顧</div><h2 class="h2">休息一下，回顧一下</h2></div>
+  <div class="rbody">
+    <div class="rgrid">
+      <div class="rcol"><p class="rl">優點</p><div class="rc r1"><b>抗通膨</b><span>總量固定 2,100 萬枚，誰都不能多印</span></div><div class="rc r2"><b>全天候・無國界</b><span>24 小時、跨國都能直接轉</span></div><div class="rc r3"><b>手續費低</b><span>轉多少都差不多，約 1 美元</span></div><div class="rc r4"><b>去中心化</b><span>沒有老闆，上萬台電腦一起記帳</span></div><div class="rc r5"><b>交易無法竄改</b><span>改一筆，全世界都知道</span></div></div>
+      <div class="rcol neg"><p class="rl">代價</p><div class="rc r6"><b>弄丟，就沒了</b><span>助記詞弄丟，錢永遠拿不回來</span></div><div class="rc r7"><b>漲跌幅大</b><span>一年 −77%，十年 187 倍</span></div><div class="rc r8"><b>轉出去，就回不來</b><span>沒有取消鍵，也沒有客服</span></div></div>
+    </div>
+    <div class="rquiz"><p class="rl">快問快答</p><p class="rhint" data-only="0">看完這張表，<br>等一下考考你 ↓</p><div class="qa f" data-step="1"><p class="q"><i>Q1</i>比特幣最多會有幾枚？</p><p class="a f" data-step="2">2,100 萬枚</p></div><div class="qa f" data-step="3"><p class="q"><i>Q2</i>忘記助記詞，客服能幫你找回來嗎？</p><p class="a f" data-step="4">不能，弄丟就沒了</p></div><div class="qa f" data-step="5"><p class="q"><i>Q3</i>轉錯地址，可以按取消嗎？</p><p class="a f" data-step="6">不行，轉出去就回不來</p></div></div>
+  </div>
+  <aside class="notes" data-time="2:00">
+    <p>中場休息一下。先讓大家看完整張表（約 20 秒），再進快問快答：每按一下出現一題，先請台下喊答案，再按一下揭曉，左邊對應的那一格會亮起來。</p>
+    <ul>
+      <li>Q1：比特幣最多會有幾枚？→ 2,100 萬枚（抗通膨）。</li>
+      <li>Q2：忘記助記詞，客服能幫你找回來嗎？→ 不能，弄丟就沒了。</li>
+      <li>Q3：轉錯地址，可以按取消嗎？→ 不行，轉出去就回不來。</li>
+      <li>收尾：「優點和代價都知道了。接下來我們來看，為什麼新聞總說它是詐騙。」</li>
+    </ul>
+  </aside>
 </section>
 
 <!-- ================= 03 詐騙 ================= -->
